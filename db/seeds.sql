@@ -1,0 +1,1 @@
+INSERT INTO burgers(burger_name, devoured) VALUES ("Cheeseburger", false), ("Cali Burger", false), ("Hawaiian Burger", false), ("Bacon Burger", true);
