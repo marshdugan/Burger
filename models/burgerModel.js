@@ -6,18 +6,30 @@ var burger = {
         cb(res);
       });
     },
-    // The variables cols and vals are arrays.
-    insertOne: function(cols, vals, cb) {
-      orm.insertOne("burger", cols, vals, function(res) {
+
+    insertOne: function(colVal, cb) {
+      orm.insertOne("burgers", colVal, function(res) {
         cb(res);
       });
     },
-    updateOne: function(objColVals, condition, cb) {
-      orm.updateOne("burgers", objColVals, condition, function(res) {
+    
+    updateOne: function(colVal, whereCol, cb) {
+      orm.updateOne("burgers", colVal, whereCol, function(res) {
         cb(res);
       });
     }
-  };
+    // // The variables cols and vals are arrays.
+    // insertOne: function(cols, vals, cb) {
+    //   orm.insertOne("burger", cols, vals, function(res) {
+    //     cb(res);
+    //   });
+    // },
+    // updateOne: function(objColVals, condition, cb) {
+    //   orm.updateOne("burgers", objColVals, condition, function(res) {
+    //     cb(res);
+    //   });
+    // }
+};
   
   // Export the database functions for the controller 
   module.exports = burger;
